@@ -1,34 +1,13 @@
 @@include('components/header.html', {"title": "test"})
 
 
-<!-- <div class="datepicker">
-	<div id="datePickerInput" class="datepicker__input ">
-		<label>Datepicker</label>
-		<input type="text" id="date" class="onFocus" readonly />
-	</div>
-	<div id="date_picker_calendar" class="datepicker__calendar">
-		<div id="calendar_header">
-			<button class="cal-btn back"><img
-					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABJUlEQVR4nO2Uv0oDQRCHR9BKrAQJ2FgIdnc7njtzSbMzd7lGC80T5DXMW+gzpNJHsPEJYuELBA60EBELsfIfBGIixvNyt0IKP9h2vt3fb1iAfxaCXZt0DGuOrO8+jmHNQ3JHnwLDeutrOI4lJDcTAcngDwSDSUSkCbK++RSEJAdfejCkfX+31/63oq1N15H0rn7Bch80s42Z22SsdGsLrHQLVxZJLioLSC8BYKlQELLbQpanCrk/Y+y2C4dPFd6bP3s9hrI455aR9GqO219HUbRSWjB6xV5qDcnL7wJ5RZs2oQpIelqi2BOoShBkq0g6LMg932m11qAOhnX/5+zlEHyALOczhp+BL6x1DSR9mPoOHsM42QSfGE6yUR+kQxO7ttfhC80HheuaG9wAq10AAAAASUVORK5CYII="></button>
-			<div class="datepicker__month-pick"></div>
-			<div class="datepicker__year"></div>
-		</div>
-		<div id="cal_wrapper">
-			<div id="cal_days"></div>
-			<div id="calendar_main"></div>
-		</div>
-	</div>
-</div> -->
-
 <div class="datepicker">
 	<div class="datepicker__input ">
 		<label class="datepicker__label">Datepicker</label>
 		<input type="text" class="datepicker__input onFocus" readonly />
 	</div>
-	<div class="calendar">
+	<div class="calendar hidden">
 		<div class="calendar__header">
-			<!-- <button class="cal-btn back"><img
-					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABJUlEQVR4nO2Uv0oDQRCHR9BKrAQJ2FgIdnc7njtzSbMzd7lGC80T5DXMW+gzpNJHsPEJYuELBA60EBELsfIfBGIixvNyt0IKP9h2vt3fb1iAfxaCXZt0DGuOrO8+jmHNQ3JHnwLDeutrOI4lJDcTAcngDwSDSUSkCbK++RSEJAdfejCkfX+31/63oq1N15H0rn7Bch80s42Z22SsdGsLrHQLVxZJLioLSC8BYKlQELLbQpanCrk/Y+y2C4dPFd6bP3s9hrI455aR9GqO219HUbRSWjB6xV5qDcnL7wJ5RZs2oQpIelqi2BOoShBkq0g6LMg932m11qAOhnX/5+zlEHyALOczhp+BL6x1DSR9mPoOHsM42QSfGE6yUR+kQxO7ttfhC80HheuaG9wAq10AAAAASUVORK5CYII="></button> -->
 			<div class="calendar__month-pick calendar-select">
 				<div class="calendar-select__value calendar-select__value_small-gap">
 					<div class="calendar-select__current"></div>
@@ -55,7 +34,15 @@
 			<div class="calendar__year"></div>
 		</div>
 		<div class="calendar__body">
-			<div class="calendar__week-days"></div>
+			<div class="calendar__week-days">
+				<div class="calendar__day">П</div>
+				<div class="calendar__day">В</div>
+				<div class="calendar__day">С</div>
+				<div class="calendar__day">Ч</div>
+				<div class="calendar__day">П</div>
+				<div class="calendar__day">С</div>
+				<div class="calendar__day">В</div>
+			</div>
 			<div class="calendar__days"></div>
 		</div>
 	</div>

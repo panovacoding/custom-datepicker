@@ -11,14 +11,8 @@
 </head>
 
 <body>
-	<header class="header">
-		<div class="container">
-			<h1>HEADER</h1>
-		</div>
-	</header>
+
 	<main>
-
-
 
 
 <div class="datepicker">
@@ -26,9 +20,8 @@
 		<label class="datepicker__label">Datepicker</label>
 		<input type="text" class="datepicker__input onFocus" readonly="readonly">
 	</div>
-	<div class="calendar">
+	<div class="calendar hidden">
 		<div class="calendar__header">
-			
 			<div class="calendar__month-pick calendar-select">
 				<div class="calendar-select__value calendar-select__value_small-gap">
 					<div class="calendar-select__current"></div>
@@ -55,7 +48,15 @@
 			<div class="calendar__year"></div>
 		</div>
 		<div class="calendar__body">
-			<div class="calendar__week-days"></div>
+			<div class="calendar__week-days">
+				<div class="calendar__day">П</div>
+				<div class="calendar__day">В</div>
+				<div class="calendar__day">С</div>
+				<div class="calendar__day">Ч</div>
+				<div class="calendar__day">П</div>
+				<div class="calendar__day">С</div>
+				<div class="calendar__day">В</div>
+			</div>
 			<div class="calendar__days"></div>
 		</div>
 	</div>
@@ -63,13 +64,9 @@
 
 </main>
 
-<footer class="footer">
-	<div class="container">
-		<h1>FOOTER</h1>
-	</div>
-</footer>
 
-<script src="js/script.js" type="module"></script>
+
+<script src="js/script-new.js" type="module"></script>
 </body>
 
 </html>

@@ -19,7 +19,6 @@ body {
 }
 
 .datepicker {
-    // width: 300px;
 	width: 256px;
     margin: 0 auto;
     transform: scale(1.2);
@@ -49,18 +48,6 @@ body {
 			outline: none;
 		}
 	
-		&::after {
-			content: "▾";
-			padding: 12px 15px;
-			position: absolute;
-			right: 4px;
-			top: 42%;
-			color: #8A8F9F;
-		}
-	
-		&_open::after {
-			rotate: 180deg;
-		}
 	}
 
 	&__label {
@@ -72,10 +59,7 @@ body {
 	}
 }
 
-
-
 .calendar {
-    // min-height: fit-content;
 	max-height: 288px;
     overflow: hidden;
     padding: 16px;
@@ -87,7 +71,6 @@ body {
 
 	&__header {
 		width: 100%;
-		// min-height: 30px;
 		margin-bottom: 12px;
 		color: black;
 		display: flex;
@@ -97,8 +80,6 @@ body {
 
 	&__week-days, &__days {
 		display: grid;
-		// row-gap: 5px;
-		// column-gap: 5px;
 		color: black;
 		grid-template-columns: repeat(7, 1fr);
 	}
@@ -112,53 +93,12 @@ body {
 	&__week-days {
 		font-weight: 700;
 	}
-}
 
-
-.cell_wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-	width: 32px;
-	max-height: 32px;
-}
-
-.cal_date {
-	color: #A09D9D;
-}
-
-.current {
-    background: var(--dark-current-year);
-    color: var(--dark-current-year-fg);
-}
-
-.current:not(.active):hover {
-    background: var(--dark-hover);
-    color: var(--dark-date-foreground);
-    border: 2px solid var(--dark-selected);
-}
-
-.cal-btn:hover,
-.current:hover {
-    cursor: pointer;
-}
-
-.active {
-    background: var(--dark-selected);
-    color: var(--dark-date-foreground);
-}
-
-.inactive_indicator:after {
-    /*   text-decoration: underline; */
-    content: '';
-    width: 3px;
-    height: 3px;
-    background: red;
-    position: absolute;
-    bottom: 3px;
-    left: 50%;
+	&__day {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 .hidden {
@@ -171,8 +111,6 @@ body {
 		align-items: center;
 		cursor: pointer;
 
-		transition: all 0.3s;
-
 		&_small-gap {
 			gap: 5px;
 		}
@@ -183,18 +121,19 @@ body {
 		height: 6px;
 
 		& path {
-			transition: all 0.3s;
+			transition: color 0.3s;
 		}
 
 	}
 
-	&__value_open {
-
+	
+	&_open .calendar-select__value {
 		text-decoration: underline;
+		
+	}
 
-		& .calendar-select__icon path{
-			fill: #151420;
-		}
+	&_open .calendar-select__icon path{
+		fill: #151420;
 	}
 
 
@@ -228,7 +167,7 @@ body {
 
 	&__option {
 		padding: 7px 12px;
-		transition: all 0.2s;
+		transition: background 0.2s;
 		cursor: pointer;
 
 		&_current, &:hover {
@@ -237,6 +176,25 @@ body {
 	}
 }
 
-.cell_item {
+button.date-cell {
+	border: none;
+	width: 32px;
+	height: 32px;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	font-size: 15px;
+	
+	&:not(:disabled) {
+		cursor: pointer;
+	}
+
+	&.today {
+		background: gray;
+	}
+
+	&.selected {
+		background: #364c92;
+	}
 }
